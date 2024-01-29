@@ -1,0 +1,52 @@
+
+<InfoLabel>:
+    MDLabel:
+        color:(0.16,0.68,0.80,1) 
+        text:root.property
+        halign:'left'
+    MDLabel:
+        color:(0.14,0.72,0.41,1)
+        text:root.value
+        halign:'right'
+
+<RecogSummary>:
+    MDBoxLayout:
+        width: root.width
+        height: root.height
+        orientation: 'vertical'
+        MDLabel:
+            halign:'center'
+            valign:'top'
+            font_style: 'H5'
+            color:1,1,1,1   
+            size_hint: 1, None
+            height:50
+            text:"Recognized " + root.prediction_name
+        ScrollView:
+            do_scroll_x:False
+            
+            MDGridLayout:
+                cols: 1
+                rows : 9
+                padding: 10, 10
+                spacing: 10, 10
+                adaptive_height:True
+                row_default_height: kingdom.minimum_height + 10                
+
+                InfoLabel:
+                    id:kingdom
+                    property:'Kingdom:'
+                InfoLabel:
+                    property:'Clade:'
+                InfoLabel:
+                    property:'Clade:'
+                InfoLabel:
+                    property:'Clade:'  
+                InfoLabel:
+                    property:'Order:'
+                InfoLabel:
+                    property:'Family:'
+                InfoLabel:
+                    property:'Subfamily:'
+                InfoLabel:
+                    property:'Genus:'

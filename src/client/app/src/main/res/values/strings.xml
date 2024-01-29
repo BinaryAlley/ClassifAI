@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translation_description="Image Classification app [CHAR_LIMIT=40]">ClassifAI</string>
+
+    <string name="app_version">1.0.0.1</string>
+    <string name="created_by">Bla blaa</string>
+    <string name="app_description">ClassifAI app is an app for bla blaa</string>
+</resources>

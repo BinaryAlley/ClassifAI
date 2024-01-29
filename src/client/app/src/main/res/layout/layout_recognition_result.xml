@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@color/color_primary">
+    <LinearLayout
+        android:id="@+id/lbl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recognized: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/gray"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/gray"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <com.ai.classifai.customview.InfoLabel
+            android:id="@+id/info_kingdom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:property="Kingdom" />
+
+        <com.ai.classifai.customview.InfoLabel
+            android:id="@+id/info_family"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:property="Family" />
+
+        <com.ai.classifai.customview.InfoLabel
+            android:id="@+id/info_subfamily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:property="Subfamily" />
+
+        <com.ai.classifai.customview.InfoLabel
+            android:id="@+id/info_clade1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:property="Clade" />
+
+        <com.ai.classifai.customview.InfoLabel
+            android:id="@+id/info_clade2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:property="Clade" />
+
+        <com.ai.classifai.customview.InfoLabel
+            android:id="@+id/info_clade3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:property="Clade" />
+
+        <com.ai.classifai.customview.InfoLabel
+            android:id="@+id/info_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:property="Order" />
+
+        <com.ai.classifai.customview.InfoLabel
+            android:id="@+id/info_tribe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:property="Tribe" />
+
+        <com.ai.classifai.customview.InfoLabel
+            android:id="@+id/info_genus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:property="Genus" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>
+

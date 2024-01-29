@@ -1,0 +1,51 @@
+<MenuScreenListItem@OneLineAvatarListItem>:
+    theme_text_color:'Custom'
+    text_color:(1,1,1,1)
+
+<MenuScreen>:
+    name: "menu"
+                    
+    MDList:
+        pos_hint: {'top':.99, }
+        md_bg_color:(0.00,0.31,0.56,1)
+        
+        MenuScreenListItem:
+            text: "Real time Recognition"
+            on_release: 
+                app.change_screen('rt_recog','left')
+            IconLeftWidget:
+                icon: "camera-enhance"
+                           
+
+        MenuScreenListItem:
+            text: "File Recognition"
+            on_release: 
+                app.change_screen('file_recog','left')
+            IconLeftWidget:
+                icon: "camera-image"
+
+        MenuScreenListItem:
+            text: "History"
+            on_release: 
+                app.change_screen('history','left')
+            IconLeftWidget:
+                icon: "history"
+
+
+        MenuScreenListItem:
+            text: "About"
+            on_release: 
+                app.change_screen('about','left')
+            IconLeftWidget:
+                icon: "account-group-outline"     
+
+            
+
+        MenuScreenListItem:
+            text: "Quit"
+            on_release:app.get_running_app().stop()
+            IconLeftWidget:
+                icon: "exit-to-app"     
+
+            
+

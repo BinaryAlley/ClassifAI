@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="InfoLabel">
+        <attr name="property" format="string" />
+        <attr name="value" format="string" />
+    </declare-styleable>
+</resources>

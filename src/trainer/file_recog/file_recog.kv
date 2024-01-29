@@ -1,0 +1,70 @@
+<FileRecogScreen>:
+    name:'file_recog'
+
+    MDBoxLayout:
+        padding:8,26,8,8
+        orientation: 'vertical'
+        spacing:10
+        MDBoxLayout:
+            adaptive_height:True
+            MDLabel:
+                halign:'left'
+                text:'Path'
+                color:(0.38,0.72,1.00,1)
+                pos_hint: {'center_y':.5, }
+                size_hint:None,None
+                height:40
+                width:50
+            RelativeLayout:
+                id:path_box
+                Widget:
+                    canvas:
+                        Color: 
+                            rgba: (0.67,0.67,0.67,1)
+                        Line:
+                            points: (self.x, self.y, self.width, self.x)
+                            joint: 'round'
+                            cap: 'round'
+                            width: 2
+                        Line:
+                            points: (self.x, self.height, self.width, self.height)
+                            joint: 'round'
+                            cap: 'round'
+                            width: 2
+                        Line:
+                            points: (self.x, self.y, self.x, self.height)
+                            joint: 'round'
+                            cap: 'round'
+                            width: 2
+                        Line:
+                            points: (self.width, self.y, self.width, self.height)
+                            joint: 'round'
+                            cap: 'round'
+                            width: 2            
+                TextInput:
+                    text: root.path
+                    cursor_color:1,1,1,1
+                    padding:8,8,16,8
+                    pos_hint: {'y':-.1, }
+                    background_color:0,0,0,0
+                    multiline:False
+        
+        RelativeLayout:
+            size_hint:None, None
+            width: path_box.width
+            height:btn.height
+            pos_hint: {'right':1, }
+            MDRectangleFlatButton:
+                id:btn
+                text: "Open Gallery"
+                text_color: 0,0,0,1
+                md_bg_color: (0.63,0.63,0.63,1)
+                pos_hint: {'left':1,'top':1 }
+                on_press: root.open_gallery()
+            MDRectangleFlatButton:
+                text: "Predict"
+                text_color: 0,0,0,1
+                md_bg_color: (0.63,0.63,0.63,1)
+                pos_hint: {'right':1,'top':1 }    
+                
+        RecogSummary:     

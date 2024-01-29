@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.ClassifAI" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="toolbarStyle">@style/CustomToolBarStyle</item>
+    </style>
+
+    <style name="CustomToolBarStyle" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="titleTextColor">@color/light_blue</item>
+        <item name="android:background">@color/toolbar_bg</item>
+        <item name="background">@color/toolbar_bg</item>
+    </style>
+
+    <style name="ButtonChip" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="chipBackgroundColor">@color/color_accent</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="MenuChip" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="chipCornerRadius">0dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="chipBackgroundColor">@color/color_primary</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="iconStartPadding">10dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">26dp</item>
+        <item name="android:paddingBottom">26dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body2</item>
+    </style>
+
+    <style name="InfoLabelPropertyText" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/infolabel_property_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="InfoLabelValueText" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/infolabel_value_color</item>
+    </style>
+
+    <style name="AboutLabel" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_primary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <com.github.florent37.shapeofview.shapes.RoundRectView
+        android:id="@+id/frame_img_prediction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:shape_roundRect_borderColor="@color/gray"
+        app:shape_roundRect_borderWidth="3dp"
+        app:shape_roundRect_topRightRadius="8dp"
+        app:shape_roundRect_topLeftRadius="8dp"
+        app:shape_roundRect_bottomRightRadius="8dp"
+        app:shape_roundRect_bottomLeftRadius="8dp">
+
+    <com.ai.classifai.customview.SquareImageView
+        android:id="@+id/img_prediction"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:scaleType="fitXY"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#77000000"
+        android:layout_gravity="bottom">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:text="Tulip (50%)"/>
+    </FrameLayout>
+
+  </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/action_share"
+        style="@style/ButtonChip"
+        app:chipIcon="@drawable/share"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Share"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/frame_img_prediction"
+        app:layout_constraintTop_toBottomOf="@+id/frame_img_prediction" />
+
+  <com.google.android.material.chip.Chip
+      android:id="@+id/action_delete"
+      style="@style/ButtonChip"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+
+      android:layout_marginTop="8dp"
+      android:backgroundTint="#F44336"
+      android:text="Delete"
+      app:chipIcon="@drawable/delete"
+      app:layout_constraintStart_toStartOf="@+id/frame_img_prediction"
+      app:layout_constraintTop_toBottomOf="@+id/frame_img_prediction" />
+
+  <com.google.android.material.chip.Chip
+      android:id="@+id/action_wiki"
+      style="@style/ButtonChip"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      android:text="Wiki"
+      app:chipIcon="@drawable/web"
+      app:layout_constraintEnd_toStartOf="@+id/action_share"
+      app:layout_constraintStart_toEndOf="@+id/action_delete"
+      app:layout_constraintTop_toBottomOf="@+id/frame_img_prediction" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

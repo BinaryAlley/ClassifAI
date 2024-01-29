@@ -1,0 +1,42 @@
+<HistoryItem>:
+    
+    orientation: 'vertical'
+    spacing:16
+    size_hint:1, None
+    height:250
+    #md_bg_color:1,1,0,1
+    RelativeLayout:
+        Widget:
+            id:box
+            canvas:
+                Color: 
+                    rgba: (0.67,0.67,0.67,1)
+                Line:
+                    points: (self.x, self.y, self.width, self.x)
+                    joint: 'round'
+                    cap: 'round'
+                    width: 2
+                Line:
+                    points: (self.x, self.height, self.width, self.height)
+                    joint: 'round'
+                    cap: 'round'
+                    width: 2
+                Line:
+                    points: (self.x, self.y, self.x, self.height)
+                    joint: 'round'
+                    cap: 'round'
+                    width: 2
+                Line:
+                    points: (self.width, self.y, self.width, self.height)
+                    joint: 'round'
+                    cap: 'round'
+                    width: 2
+        AsyncImage:            
+            source: root.img_path
+            allow_stretch: True
+            keep_ratio: False
+    MDRectangleFlatButton:
+        text: "Share"
+        text_color: 0,0,0,1
+        md_bg_color: (0.63,0.63,0.63,1)
+        pos_hint: {'right':1, }

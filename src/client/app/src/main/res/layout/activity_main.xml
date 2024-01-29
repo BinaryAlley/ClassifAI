@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_primary"
+    tools:context="com.ai.classifai.MainActivity">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/btn_rt_recog"
+        style="@style/MenuChip"
+        android:text="Real-Time Recognition"
+        app:chipMinTouchTargetSize="0dp"
+        app:chipIcon="@drawable/rt_recog"/>
+    <com.google.android.material.chip.Chip
+        android:id="@+id/btn_file_recog"
+        style="@style/MenuChip"
+        android:text="File Recognition"
+        app:chipMinTouchTargetSize="0dp"
+        app:chipIcon="@drawable/file_recog"/>
+    <com.google.android.material.chip.Chip
+        android:id="@+id/btn_collection"
+        style="@style/MenuChip"
+        android:text="Collection"
+        app:chipMinTouchTargetSize="0dp"
+        app:chipIcon="@drawable/collection"/>
+    <com.google.android.material.chip.Chip
+        android:id="@+id/btn_about"
+        style="@style/MenuChip"
+        android:text="About"
+        app:chipMinTouchTargetSize="0dp"
+        app:chipIcon="@drawable/about"/>
+    <com.google.android.material.chip.Chip
+        android:id="@+id/btn_quit"
+        style="@style/MenuChip"
+        android:text="Quit"
+        app:chipMinTouchTargetSize="0dp"
+        app:chipIcon="@drawable/quit"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

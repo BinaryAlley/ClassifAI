@@ -1,0 +1,26 @@
+#:include menu/menu.kv
+#:include recog_summary/recog_summary.kv
+#: include rt_recog/rt_recog.kv
+#: include file_recog/file_recog.kv
+#: include about/about.kv
+#: include history/history.kv
+#: include history/history_item.kv
+
+<RootLayout>:
+    manager:manager
+    orientation: 'vertical'
+    md_bg_color:(0.00,0.31,0.56,1)
+    MDToolbar:
+        title: "ClassifAI"
+        md_bg_color:(0.28,0.28,0.28,1)
+        specific_text_color:(0.38,0.72,1.00,1)
+        elevation: 10 
+        left_action_items: [["",lambda x:x]] if manager.current == 'menu' else  [["arrow-left", lambda x: app.change_screen('menu')]]
+    WindowManager:
+        id:manager
+        FileRecogScreen:
+        HistoryScreen:
+        MenuScreen:
+        RtRecogScreen:
+        AboutScreen:
+
